@@ -29,7 +29,7 @@ export class UsuariosService {
     return data;
   }
 
-  async findOne(id: string) {
+  async findOne(id: number) {
     const client = this.supabaseService.getClient();
     const { data: usuario, error } = await client
       .from('clientes')
